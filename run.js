@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 // Основной файл.
 // Запускает игру.
+const readline = require('readline');
 const Game = require('./src/Game');
 const runInteractiveConsole = require('./src/keyboard');
 
@@ -8,8 +10,15 @@ const game = new Game({
   trackLength: 30,
 });
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question('Enter you name:', (name) => {
+  // rl.close();
+  runInteractiveConsole(game);
+  console.log(`Player ${name}`);
+});
+
 // Запуск игры.
-// console.log(game.track);
-// console.log();
-// game.play();
-runInteractiveConsole(game);
