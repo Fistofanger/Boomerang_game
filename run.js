@@ -9,4 +9,5 @@ const game = new Game({
 
 // Запуск игры.
 console.log(game.track);
+// console.log();
 game.play();
