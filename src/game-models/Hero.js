@@ -4,6 +4,7 @@ class Hero {
   constructor(args = {}) {
     this.skin = '🤠'; // можете использовать любые emoji '💃'
     this.position = args.position || 0;
+    this.boomerang = args.bumerang;
     // this.points = args.points || 0;
   }
 
